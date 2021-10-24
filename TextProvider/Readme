@@ -1,0 +1,20 @@
+Its java based text provider server using socket, its able to handle multiple request from different client. 
+Application server shut down after 1 minute(we can configure as per the business need)
+Its return the line context if characters are ASCII type and line number is valid.
+
+
+To run the java application.
+1) Run the command on terminal to retrieve the line context after passing lineNumber
+
+java -cp /Users/neel/eclipse-workspace/TextProviderServer/TextProvider/target/TextProvider-0.0.1-SNAPSHOT-jar-with-dependencies.jar com.server.TextProvider.TextProviderServer "/Users/neel/eclipse-workspace/TextProviderServer/TextProvider/src/main/resources/test"
+
+TextProvider-0.0.1-SNAPSHOT-jar-with-dependencies.jar                                  --> build the jar through maven build
+com.server.TextProvider.TextProviderServer                                             --> main class
+/Users/neel/eclipse-workspace/TextProviderServer/TextProvider/src/main/resources/test  --> Text File location
+
+
+Performance analysis:
+1) 30 MB of records in text file
+--> Took 60 seconds to process and return the response
+
+
